@@ -24,28 +24,10 @@ function setup() {
     }
 }
   
-  
-
-
-
-
-
 function draw() {
     background(220); 
-
     drawPuntaje()
-    // fill(255,255,255);
-    // arc(160, 50, 80, 80, 9, PI/2, );
-
-
-
-    // arc(240, 50, 80, 80, 0, PI/2 + 2*PI, PIE );
-
-
-    // arc(350, 50, 80, 80, 23*PI/12, 3*PI/2, );
-
-
-    // arc(50, 50, 80, 80, 0, PI + QUARTER_PI, CHORD)
+    
 
     circles.forEach(circle=>{
       ellipse(circle.x,circle.y,circleSize)
@@ -59,13 +41,13 @@ function draw() {
 
   if(keyIsPressed){
     if(keyCode === LEFT_ARROW){
-      valueX=valueX-1
+      valueX=valueX-2
     }else if(keyCode === RIGHT_ARROW){
-      valueX=valueX+1
+      valueX=valueX+2
     }else if(keyCode === UP_ARROW){
-      valueY=valueY-1
+      valueY=valueY-2
     }else if(keyCode === DOWN_ARROW){
-      valueY=valueY+1
+      valueY=valueY+2
     }
 
   }
@@ -85,12 +67,6 @@ function draw() {
     
 }
 
-
-// function keyPressed(){
-//   if(keyCode === LEFT_ARROW){
-//     valueX=valueX-1
-//   }
-// }
 
 function verifyIfPacmanIsTouchingCircle(){
   const newCircles = circles.filter(circle=>{
@@ -127,15 +103,3 @@ function drawPuntaje(){
 }
 
 
-
-
-// function drawPuntaje(){
-//   ctx.font = "30px Arial";
-//   ctx.fillText("Puntos: " + puntos, 10, 50);
-  
-
-// }
-
-function CirclesPacmanTouch(){
-
-}
